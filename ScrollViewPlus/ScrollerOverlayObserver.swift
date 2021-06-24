@@ -76,11 +76,11 @@ public class ScrollerOverlayObserver: NSObject {
         return scrollView?.verticalScroller
     }
 
-    var horizontalScrollerVisible: Bool {
+    public var horizontalScrollerVisible: Bool {
         return horizontalState.invisible == false
     }
 
-    var verticalScrollerVisible: Bool {
+    public var verticalScrollerVisible: Bool {
         return verticalState.invisible == false
     }
 
