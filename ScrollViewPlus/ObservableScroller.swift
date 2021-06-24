@@ -17,7 +17,6 @@ open class ObservableScroller: NSScroller {
         let currentThickness = knobSlotThickness
 
         if currentThickness != lastSlotThickness {
-            print("posting thickness changed")
             NotificationCenter.default.post(name: .thicknessDidChange, object: self)
         }
 
