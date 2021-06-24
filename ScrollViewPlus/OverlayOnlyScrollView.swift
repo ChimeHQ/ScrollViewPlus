@@ -1,6 +1,6 @@
 import Cocoa
 
-public class OverlayOnlyScrollView: NSScrollView {
+open class OverlayOnlyScrollView: NSScrollView {
     public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
 
