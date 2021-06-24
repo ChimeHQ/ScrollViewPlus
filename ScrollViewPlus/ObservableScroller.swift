@@ -9,7 +9,7 @@ extension Notification.Name {
 open class ObservableScroller: NSScroller {
     private var lastSlotThickness: CGFloat = 0.0
 
-    public override class var isCompatibleWithOverlayScrollers: Bool {
+    override open class var isCompatibleWithOverlayScrollers: Bool {
         return self == ObservableScroller.self
     }
 
@@ -23,13 +23,13 @@ open class ObservableScroller: NSScroller {
         lastSlotThickness = currentThickness
     }
 
-    override public func setNeedsDisplay(_ invalidRect: NSRect) {
+    override open func setNeedsDisplay(_ invalidRect: NSRect) {
         checkThickness()
 
         super.setNeedsDisplay(invalidRect)
     }
 
-    override public func trackKnob(with event: NSEvent) {
+    override open func trackKnob(with event: NSEvent) {
         checkThickness()
         NotificationCenter.default.post(name: .willStartTracking, object: self)
 
