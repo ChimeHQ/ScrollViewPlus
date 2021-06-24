@@ -6,7 +6,7 @@ extension Notification.Name {
     static let didEndTracking = Notification.Name("ScrollerDidEndTracking")
 }
 
-public class ObservableScroller: NSScroller {
+open class ObservableScroller: NSScroller {
     private var lastSlotThickness: CGFloat = 0.0
 
     public override class var isCompatibleWithOverlayScrollers: Bool {
