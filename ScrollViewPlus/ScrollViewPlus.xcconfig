@@ -1,0 +1,11 @@
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SWIFT_VERSION = 5.0
+MACH_O_TYPE = staticlib
+
+CURRENT_PROJECT_VERSION = 1
+DYLIB_CURRENT_VERSION = $(CURRENT_PROJECT_VERSION)
+MARKETING_VERSION = 0.1.0
+
+MACOSX_DEPLOYMENT_TARGET = 10.12
