@@ -155,7 +155,7 @@ public class ScrollerOverlayObserver: NSObject {
 
     private var flashVisibilityTimeInterval: TimeInterval {
         // magic number that approximates the fade duration
-        return 0.40
+        return 0.80
     }
 
     private var scrollVisibilityTimeInterval: TimeInterval {
@@ -164,7 +164,7 @@ public class ScrollerOverlayObserver: NSObject {
     }
 
     private var trackingVisibilityTimeInterval: TimeInterval {
-        return 0.5
+        return 0.50
     }
 
     private func scheduleCheck(for interval: TimeInterval) {

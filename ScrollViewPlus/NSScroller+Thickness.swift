@@ -16,5 +16,9 @@ public extension NSScroller {
     var defaultKnobSlotThickness: CGFloat {
         return NSScroller.scrollerWidth(for: controlSize, scrollerStyle: scrollerStyle)
     }
+
+    var knobSlotVisible: Bool {
+        return knobSlotThickness >= defaultKnobSlotThickness
+    }
 }
 
