@@ -155,7 +155,12 @@ public class ScrollerOverlayObserver: NSObject {
 
     private var flashVisibilityTimeInterval: TimeInterval {
         // magic number that approximates the fade duration
-        return 0.20
+        return 0.40
+    }
+
+    private var scrollVisibilityTimeInterval: TimeInterval {
+        // magic number that approximates the fade duration
+        return 0.30
     }
 
     private var trackingVisibilityTimeInterval: TimeInterval {
@@ -216,7 +221,7 @@ extension ScrollerOverlayObserver {
     public func scroll(_ clipView: NSClipView, to point: NSPoint) {
         let horizScroll = lastPoint.x != point.x
         let vertScroll = lastPoint.y != point.y
-        let interval = flashVisibilityTimeInterval
+        let interval = scrollVisibilityTimeInterval
 
         lastPoint = point
 

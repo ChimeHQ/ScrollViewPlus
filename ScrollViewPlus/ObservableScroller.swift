@@ -1,6 +1,6 @@
 import Cocoa
 
-extension Notification.Name {
+public extension Notification.Name {
     static let thicknessDidChange = Notification.Name("ScrollerThicknessDidChange")
     static let willStartTracking = Notification.Name("ScrollerWillStartTracking")
     static let didEndTracking = Notification.Name("ScrollerDidEndTracking")
