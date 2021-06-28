@@ -154,13 +154,11 @@ public class ScrollerOverlayObserver: NSObject {
     }
 
     private var flashVisibilityTimeInterval: TimeInterval {
-        // magic number that approximates the fade duration
         return 0.80
     }
 
     private var scrollVisibilityTimeInterval: TimeInterval {
-        // magic number that approximates the fade duration
-        return 0.30
+        return 0.50
     }
 
     private var trackingVisibilityTimeInterval: TimeInterval {
@@ -173,8 +171,10 @@ public class ScrollerOverlayObserver: NSObject {
         let time = DispatchTime.now() + .milliseconds(Int(interval * 1000.0))
         let currentTime = Date()
 
-        DispatchQueue.main.asyncAfter(deadline: time) {
-            self.checkVisibility(startingAt: currentTime, interval: interval)
+        // because this is just a plain delay, we have to be sure
+        // we do not keep ourselve alive
+        DispatchQueue.main.asyncAfter(deadline: time) { [weak self] in
+            self?.checkVisibility(startingAt: currentTime, interval: interval)
         }
     }
 
