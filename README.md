@@ -1,4 +1,3 @@
-[![Github CI](https://github.com/ChimeHQ/ScrollViewPlus/workflows/CI/badge.svg)](https://github.com/ChimeHQ/ScrollViewPlus/actions)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 
 # ScrollViewPlus
