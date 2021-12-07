@@ -1,8 +1,8 @@
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+[![Github CI](https://github.com/ChimeHQ/ScrollViewPlus/workflows/CI/badge.svg)](https://github.com/ChimeHQ/ScrollViewPlus/actions)
 
 # ScrollViewPlus
 
-ScrollViewPlus is a small library that provides some helpful extension and capabilities for working with NSScrollView.
+ScrollViewPlus is a small library that provides some helpful extension and capabilities for working with `NSScrollView`.
 
 ## Integration
 
@@ -38,7 +38,7 @@ A class that can be used to observe the scroller overlay size and visibily chang
 
 A very simple `NSScrollView` subclass that will always use overlay style scrollers, regardless of user prefs or input device types.
 
-###PositionJumpingWorkaroundScrollView
+### PositionJumpingWorkaroundScrollView
 
 A class that works around a pretty esoteric problem:
 
