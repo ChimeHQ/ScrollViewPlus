@@ -2,15 +2,15 @@ import Cocoa
 
 public extension NSScroller {
     var knobSlotThickness: CGFloat {
-        let rect = rect(for: .knobSlot)
+        let thicknessRect = rect(for: .knobSlot)
 
-        return min(rect.width, rect.height)
+        return min(thicknessRect.width, thicknessRect.height)
     }
 
     var knobThickness: CGFloat {
-        let rect = rect(for: .knob)
+        let thicknessRect = rect(for: .knob)
 
-        return min(rect.width, rect.height)
+        return min(thicknessRect.width, thicknessRect.height)
     }
 
     var defaultKnobSlotThickness: CGFloat {
