@@ -1,5 +1,6 @@
 import Cocoa
 
+/// Used to observe changes to the scroll view's visible contents.
 public class ScrollViewVisibleRectObserver {
     public typealias ObservationHandler = (NSScrollView) -> Void
 

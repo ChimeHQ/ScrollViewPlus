@@ -1,5 +1,13 @@
 import Cocoa
 
+/// Observes the state of overlay-style NSScrollers.
+///
+/// This class monitors the state of overlay-style NSScrollers. It can invoke callbacks when
+/// interesting events occur, like visibility and thickness changes.
+///
+/// Because AppKit does not provide sufficient hooks for these events, in some cases
+/// `ScrollerOverlayObserver` depends on heuristics that aren't always correct in all situations
+/// across all OS releases.
 public class ScrollerOverlayObserver: NSObject {
     private enum TrackingState: Hashable {
         case idle
