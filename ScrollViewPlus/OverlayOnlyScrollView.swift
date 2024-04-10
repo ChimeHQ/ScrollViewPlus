@@ -1,6 +1,7 @@
 import Cocoa
 
 /// An `NSScrollView` subclass that only uses overlay-style scrollers.
+@MainActor
 open class OverlayOnlyScrollView: NSScrollView {
     public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)

@@ -14,6 +14,7 @@ import Cocoa
 /// This class uses a workaround only while these conditions are met, with the exception
 /// of the scroll being initiated by a trackpad. Haven't yet figured out how to detect that
 /// situation.
+@MainActor
 open class PositionJumpingWorkaroundScrollView: NSScrollView {
     private var lastPosition: CGFloat = 0.0
 

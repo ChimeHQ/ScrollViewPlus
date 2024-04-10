@@ -6,6 +6,7 @@ public extension Notification.Name {
     static let didEndTracking = Notification.Name("ScrollerDidEndTracking")
 }
 
+@MainActor
 open class ObservableScroller: NSScroller {
     private var lastSlotThickness: CGFloat = 0.0
 
