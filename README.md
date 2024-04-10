@@ -1,6 +1,9 @@
+<div align="center">
+
 [![Build Status][build status badge]][build status]
-[![License][license badge]][license]
 [![Platforms][platforms badge]][platforms]
+
+</div>
 
 # ScrollViewPlus
 
@@ -14,12 +17,6 @@ ScrollViewPlus is a small library that provides some helpful extension and capab
 dependencies: [
     .package(url: "https://github.com/ChimeHQ/ScrollViewPlus.git")
 ]
-```
-
-### Carthage
-
-```
-github "ChimeHQ/ScrollViewPlus"
 ```
 
 ## Classes
@@ -53,15 +50,19 @@ The scroll-position jumping will occur if this view contains an `NSTextView` and
 - the containing `NSScrollView` has a vertical ruler present
 - the pointing device is a trackpad
 
-## Suggestions or Feedback
+## Contributing and Collaboration
 
-We'd love to hear from you! Get in touch via an issue or pull request.
+I would love to hear from you! Issues or pull requests work great. A [Discord server][discord] is also available for live help, but I have a strong bias towards answering in the form of documentation.
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+I prefer collaboration, and would love to find ways to work together if you have a similar project.
+
+I prefer indentation with tabs for improved accessibility. But, I'd rather you use the system you want and make a PR than hesitate because of whitespace.
+
+By participating in this project you agree to abide by the [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 
 [build status]: https://github.com/ChimeHQ/ScrollViewPlus/actions
 [build status badge]: https://github.com/ChimeHQ/ScrollViewPlus/workflows/CI/badge.svg
-[license]: https://opensource.org/licenses/BSD-3-Clause
-[license badge]: https://img.shields.io/github/license/ChimeHQ/ScrollViewPlus
 [platforms]: https://swiftpackageindex.com/ChimeHQ/ScrollViewPlus
 [platforms badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FChimeHQ%2FScrollViewPlus%2Fbadge%3Ftype%3Dplatforms
+[discord]: https://discord.gg/esFpX6sErJ
+[discord badge]: https://img.shields.io/badge/Discord-purple?logo=Discord&label=Chat&color=%235A64EC
