@@ -8,7 +8,8 @@ import Cocoa
 /// Because AppKit does not provide sufficient hooks for these events, in some cases
 /// `ScrollerOverlayObserver` depends on heuristics that aren't always correct in all situations
 /// across all OS releases.
-public class ScrollerOverlayObserver: NSObject {
+@MainActor
+public final class ScrollerOverlayObserver: NSObject {
     private enum TrackingState: Hashable {
         case idle
         case visible(Date, TimeInterval)
