@@ -4,16 +4,20 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+      - 'CODE_OF_CONDUCT.md'
+      - '.editorconfig'
+      - '.spi.yml'
   pull_request:
     branches:
-      - '**'
+      - main
 
 jobs:
   test:
-    name: Test on destination ${{ matrix.destination }}
-    runs-on: macOS-latest
-    
+    name: Test
+    runs-on: macOS-14
     steps:
-    - uses: actions/checkout@v1
-    - name: test ${{ matrix.destination }}
-      run: swift test
+      - uses: actions/checkout@v4
+      - name: Test macOS
+        run: set -o pipefail && xcodebuild -scheme ScrollViewPlus -destination "platform=macOS" test | xcbeautify
