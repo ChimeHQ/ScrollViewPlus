@@ -2,6 +2,7 @@ import XCTest
 @testable import ScrollViewPlus
 
 final class OverlayOnlyScrollViewTests: XCTestCase {
+	@MainActor
     func testBasicInitialization() {
         let scrollView = OverlayOnlyScrollView()
 
