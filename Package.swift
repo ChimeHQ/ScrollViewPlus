@@ -1,10 +1,12 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.0
 
 import PackageDescription
 
 let package = Package(
 	name: "ScrollViewPlus",
-	platforms: [.macOS(.v10_13)],
+	platforms: [
+		.macOS(.v10_13)
+	],
 	products: [
 		.library(name: "ScrollViewPlus", targets: ["ScrollViewPlus"]),
 	],
@@ -14,15 +16,3 @@ let package = Package(
 		.testTarget(name: "ScrollViewPlusTests", dependencies: ["ScrollViewPlus"], path: "ScrollViewPlusTests/"),
 	]
 )
-
-let swiftSettings: [SwiftSetting] = [
-	.enableExperimentalFeature("StrictConcurrency"),
-	.enableUpcomingFeature("DisableOutwardActorInference"),
-	.enableUpcomingFeature("IsolatedDefaultValues"),
-]
-
-for target in package.targets {
-	var settings = target.swiftSettings ?? []
-	settings.append(contentsOf: swiftSettings)
-	target.swiftSettings = settings
-}
